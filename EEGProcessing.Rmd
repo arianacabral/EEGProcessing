@@ -1,0 +1,33 @@
+---
+title: "Instrução de Uso: Programa para processamento de sinais EEG"
+date: "29/05/2021"
+output:
+  prettydoc::html_pretty:
+    theme: leonids
+    highlight: github
+---
+
+<style>
+body {
+text-align: justify}
+</style>
+
+
+<p style = "color:rgb(83,102,141); font-family:times, serif;font-size: 32pt"> **T** </p>
+
+
+## Passo 1
+Fazer o download do *R*, clicando [aqui](https://vps.fmvz.usp.br/CRAN/bin/windows/base/R-4.1.0-win.exe) 
+
+## Passo 2 
+Instalar o programa "R-4.1.0-win.exe"
+
+## Passo 3
+
+Fazer o download do *RStudio*, clicando [aqui](https://download1.rstudio.org/desktop/windows/RStudio-1.4.1106.exe)
+
+## Passo 4
+
+Instalar o programa "RStudio-1.4.1106.exe"
+
+## Passo 5 
