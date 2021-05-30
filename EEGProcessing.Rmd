@@ -1,5 +1,5 @@
 ---
-title: "Instrução de Uso: Programa para processamento de sinais EEG"
+title: "Instrução de Uso"
 date: "29/05/2021"
 output:
   prettydoc::html_pretty:
@@ -13,21 +13,68 @@ text-align: justify}
 </style>
 
 
-<p style = "color:rgb(83,102,141); font-family:times, serif;font-size: 32pt"> **T** </p>
+<p style = "color:rgb(176,47,72); font-family:Arial, serif;font-size: 32pt"> **Processamento de sinais EEG** </p>
 
 
 ## Passo 1
-Fazer o download do *R*, clicando [aqui](https://vps.fmvz.usp.br/CRAN/bin/windows/base/R-4.1.0-win.exe) 
+Fazer o download do **R**, clicando [aqui](https://vps.fmvz.usp.br/CRAN/bin/windows/base/R-4.1.0-win.exe) 
 
 ## Passo 2 
 Instalar o programa "R-4.1.0-win.exe"
 
 ## Passo 3
 
-Fazer o download do *RStudio*, clicando [aqui](https://download1.rstudio.org/desktop/windows/RStudio-1.4.1106.exe)
+Fazer o download do **RStudio**, clicando [aqui](https://download1.rstudio.org/desktop/windows/RStudio-1.4.1106.exe)
 
 ## Passo 4
 
 Instalar o programa "RStudio-1.4.1106.exe"
 
 ## Passo 5 
+
+Fazer o download dos arquivos disponíveis [aqui](https://github.com/arianacabral/EEGProcessing/archive/refs/heads/main.zip)
+
+## Passo 6
+
+Descompacte o arquivo "EEGProcessing-main.zip" em um diretório desejado 
+
+## Passo 7
+
+Abrir o arquivo "Exemplo.R", usando o RStudio
+
+## Passo 8
+
+Execute cada linha de código (pressione as teclas **Ctrl + Enter**)
+
+```{r eval=FALSE, include=TRUE}
+
+# Indique o seu diretório de trabalho 
+
+setwd("D:/Ariana/Documentos/2021/PSB/EXEMPLO/EEGProcessing/")
+
+# -------------------------------------------------------------------------
+
+source("EEGProcessing.r")
+
+filename <- file.choose() # escolha o arquivo desejado
+
+EEG.Processing(filename) # processamento dos sinais EEG
+```
+
+## Passo 9 
+
+Uma planilha Excel será gerada com as características estimadas
+
+```{r echo = FALSE, warning=FALSE, error=FALSE, message=FALSE}
+
+library(openxlsx)
+library(dplyr)
+
+EEG.ftr <- read.xlsx("c006B_201104_102544.xlsx")
+
+```
+
+```{r echo=FALSE}
+knitr::kable(EEG.ftr[1:5,], format = "html")
+```
+
